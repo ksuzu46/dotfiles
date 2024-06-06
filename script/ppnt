@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+  cmd.exe /c start powerpnt.exe 2>/dev/null &
+elif [ -e "$1" ]; then
+  cmd.exe /c start powerpnt.exe $(wslpath -w $1) 2>/dev/null &
+else
+  echo "open: $1 : No such file or directoty" 1>&2
+  exit 1
+fi
+exit 0
