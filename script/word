@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ $# -eq 0 ]; then
-  cmd.exe /c start winword.exe 2>/dev/null &
+  pwsh.exe /c start winword.exe 2>/dev/null &
 elif [ -e "$1" ]; then
-  cmd.exe /c start winword.exe $(wslpath -w $1) 2>/dev/null &
+  pwsh.exe /c start winword.exe $(wslpath -w $1) 2>/dev/null &
 else
   echo "open: $1 : No such file or directoty" 1>&2
   exit 1
