@@ -1,5 +1,5 @@
 alias python='python3'
 alias ptp='ptpython'
-alias apt='apt-fast'
+alias apt='sudo apt-fast'
 alias bat='batcat --paging=never'
 alias less='batcat --paging=always'
